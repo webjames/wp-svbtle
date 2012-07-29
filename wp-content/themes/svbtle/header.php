@@ -103,7 +103,7 @@ if( isset( $options['color'] ) && '' != $options['color'] ) {
 		  </ul>
 		  <aside id="svbtle_linkback">
 		    <a href="https://github.com/gravityonmars/wp-svbtle">
-		      <span class="logo_square"><span class="logo_circle">&nbsp;</span></span>&nbsp;<span class="svbtle">wp-svbtle</span>
+		      <span class="logo_square"><span class="logo_circle">&nbsp;</span></span>&nbsp;<span class="svbtle">wordpress</span>
 		    </a>
 		  </aside>
 		</header>
