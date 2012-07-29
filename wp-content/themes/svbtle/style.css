@@ -1,8 +1,10 @@
 /*
 	Theme Name: Svbtle
-	Theme URI: http://gravityonmars.com/
-	Author: Gravity On MArs
+	Theme URI: http://gravityonmars.com/?p=374
+	Author: Gravity On Mars
 	Author URI: http://gravityonmars.com/
+	Description: Simple & Clean theme inspired by svbtle.com
+	Tags: White, two-columns, flexible-width, custom-header
 	Version: 4.0
 	License: GNU General Public License v2.0
 	License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -116,6 +118,14 @@ article.post {overflow: visible}
 }
 
 
+/* Wordpress.org */
+.sticky{}
+.gallery-caption {
+	color: #666;
+	font-family: Georgia, serif;
+	font-size: 12px;
+}
+	
 /* Wordpress.com Sharing  */
 .sharing{height: 30px !important}
 .sharing .share-twitter .twitter_button{height: 20px !important}

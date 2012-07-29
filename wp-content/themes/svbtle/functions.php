@@ -11,6 +11,11 @@ function main_css()
 
 add_action( 'after_setup_theme', 'theme_setup' );
 
+if ( ! isset( $content_width ) ) $content_width = 560;
+register_sidebar();
+add_theme_support( 'automatic-feed-links' );
+
+
 function theme_setup() {
 	global $wp_version;
 	if (version_compare($wp_version, '3.4' , '>=')){ 
@@ -448,8 +453,6 @@ function wp_svbtle_comment( $comment, $args, $depth ) {
 	endswitch;
 }
 endif; // ends check for wp_svbtle_comment()
-
-
 
 function implement_ajax() {
 	global $wpdb;

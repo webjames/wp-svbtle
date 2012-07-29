@@ -25,7 +25,7 @@
 		<article id="<?php the_ID(); ?>" <?php post_class(); ?>>
 
 			<h2 class="entry-title"><?php print_post_title(); ?></h2>
-
+			<p style="display: none"><?php the_tags() ?></p>
 
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
