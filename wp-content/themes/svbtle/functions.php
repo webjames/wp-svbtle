@@ -231,15 +231,15 @@ function content_nav( $nav_id ) {
 	global $wp_query;
 		if ( $wp_query->max_num_pages > 1 ) : ?>
 	<nav class="pagination">
-		<span class="prev"><?php next_posts_link( __( '←   Newer') ); ?></span>
-		<span class="next"><?php previous_posts_link( 'Continue   →' ); ?></span>
+		<span class="prev"><?php next_posts_link( __( '&larr;   Newer') ); ?></span>
+		<span class="next"><?php previous_posts_link( 'Continue   &rarr;' ); ?></span>
   </nav>
 		<?php endif;
 }
 
 function single_content_nav( $nav_id ) {
 	?>
-	<a href="<?php echo home_url(); ?>" class="back_to_blog">←&nbsp;&nbsp;&nbsp;Back to blog</a>
+	<a href="<?php echo home_url(); ?>" class="back_to_blog"&gt;&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
 	<?php 
 }
 
@@ -324,7 +324,7 @@ function boilerplate_posted_on() {
 	// d = 01–31
 	// printf( __( '<span class="%1$s">Posted on</span> <span class="entry-date">%2$s %3$s %4$s</span> <span class="meta-sep">by</span> %5$s', 'boilerplate' ),
 
-	printf( __( '<span class="entry-date">%2$s %3$s %4$s</span>', 'boilerplate' ),
+	printf( __( '<span class="entry-date">%2$s %3$s, %4$s</span>', 'boilerplate' ),
 		// %1$s = container class
 		'meta-prep meta-prep-author',
 		// %2$s = month: /yyyy/mm/

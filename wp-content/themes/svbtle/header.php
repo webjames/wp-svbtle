@@ -7,43 +7,38 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.5, minimum-scale=0.5">
-		<title><?php bloginfo( 'name' ); ?></title>
+		<title><?php wp_title( 'by', true, 'right' ); bloginfo( 'name' ); ?></title>
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php
+		<?php
 
-		if ( is_singular() && get_option( 'thread_comments' ) )
-			wp_enqueue_script( 'comment-reply' );
-?>
+			if ( is_singular() && get_option( 'thread_comments' ) )
+				wp_enqueue_script( 'comment-reply' );
 
-<?php add_action( 'wp_enqueue_scripts', 'main_css' );  ?>
-<?php wp_head(); ?>
-<?php $options = get_option ( 'svbtle_options' ); ?>
-<?php echo $options['google_analytics'];?>
-<?php 
-if( isset( $options['color'] ) && '' != $options['color'] ) {
-	$color = $options['color'];
-} else {
-	$color = '<?php echo $color ?>';
-} 
-?>
+			add_action( 'wp_enqueue_scripts', 'main_css' ); 
 
-<style>blockquote {border-color: <?php echo $color ?>;}aside#logo,aside#logo div a,ul#user_meta a:hover span.link_logo_inside,ul#user_meta a:hover span.link_logo,aside.kudo.complete span.circle {background-color: <?php echo $color ?>;}section.preview header#begin h2,ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {color: <?php echo $color ?>;}ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {border-color: <?php echo $color ?>;}::-moz-selection { background: <?php echo $color ?>; color: #fff; text-shadow: none;}::selection { background: <?php echo $color ?>; color: #fff; text-shadow: none;}
-</style>
+			$options = get_option ( 'svbtle_options' ); 
 
-
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+			echo $options['google_analytics'];
+ 
+			if( isset( $options['color'] ) && '' != $options['color'] )
+				$color = $options['color'];
+			else 
+				$color = '<?php echo $color ?>';
 	
+		?>
+
+		<style>blockquote {border-color: <?php echo $color ?>;}aside#logo,aside#logo div a,ul#user_meta a:hover span.link_logo_inside,ul#user_meta a:hover span.link_logo,aside.kudo.complete span.circle {background-color: <?php echo $color ?>;}section.preview header#begin h2,ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {color: <?php echo $color ?>;}ul#user_meta a:hover,nav.pagination span.next a,nav.pagination span.prev a {border-color: <?php echo $color ?>;}::-moz-selection { background: <?php echo $color ?>; color: #fff; text-shadow: none;}::selection { background: <?php echo $color ?>; color: #fff; text-shadow: none;}
+		</style>
+		
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+		<?php 	wp_head();  ?>
+		
 	</head>
 	<body <?php body_class(); ?>>
-	
-		
-		
-		
-		
-		
 		<header id="sidebar">
 		  <aside id="logo" class="clearfix">
 		    <div class="clearfix">
@@ -102,12 +97,10 @@ if( isset( $options['color'] ) && '' != $options['color'] ) {
 		    </li>
 		  </ul>
 		  <aside id="svbtle_linkback">
-		    <a href="https://github.com/gravityonmars/wp-svbtle">
-		      <span class="logo_square"><span class="logo_circle">&nbsp;</span></span>&nbsp;<span class="svbtle">wordpress</span>
+		    <a href="http://wordpress.org">
+		      <span class="logo_square"><span class="logo_circle">&nbsp;</span></span>&nbsp;<span class="svbtle">Wordpress</span>
 		    </a>
 		  </aside>
 		</header>
 		
 		<section id="river" role="main">
-	
-
