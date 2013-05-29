@@ -59,7 +59,7 @@
 <?php endforeach; ?>  
 				<?php if (!empty($options['website_link'])): ?>
 					<li class="link feed">
-						<a href="http://<?php echo $options['website_link'] ?>"><?php echo $options['website_link'] ?></a>
+						<a href="http://<?php echo $options['website_link'] ?>"><?php echo $options['website_name'] ?></a>
 					</li>
 				<?php endif ?>
 				<?php if (!empty($options['twitter_username'])): ?>
