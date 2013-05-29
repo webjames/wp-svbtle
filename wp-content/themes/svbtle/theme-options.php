@@ -48,7 +48,11 @@ function theme_options_do_page() {
 					<tr>
 						<th><?php _e( 'Website Link', 'wordpress-svbtle' ); ?></th>
 						<td><input class="regular-text" type="text" name="svbtle_options[website_link]" value="<?php esc_attr_e( $options['website_link'] ); ?>" /></td>
-					</tr>
+                    </tr>
+                    <tr>
+                        <th><?php _e( 'Website Name', 'wordpress-svbtle' ); ?></th>
+                        <td><input class="regular-text" type="text" name="svbtle_options[website_name]" value="<?php esc_attr_e( $options['website_name'] ); ?>" /></td>
+                    </tr>
 					<tr>
 						<th><?php _e( 'Twitter Username', 'wordpress-svbtle' ); ?></th>
 						<td><input class="regular-text" type="text" name="svbtle_options[twitter_username]" value="<?php esc_attr_e( $options['twitter_username'] ); ?>" /></td>
